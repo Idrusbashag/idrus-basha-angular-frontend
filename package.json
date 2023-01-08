@@ -1,0 +1,74 @@
+{
+  "name": "onlinepizzaorder",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "ng-high-memory": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --configuration production",
+    "start": "ng serve --proxy-config src/proxy.config.json",
+    "build": "npm install --force && ng build --configuration production",
+    "watch": "ng build --watch --configuration development",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "clear_jest": "jest --clearCache"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^10.1.6",
+    "@angular/common": "~10.1.2",
+    "@angular/compiler": "~10.1.2",
+    "@angular/core": "~10.1.2",
+    "@angular/forms": "~10.1.2",
+    "@angular/platform-browser": "~10.1.2",
+    "@angular/platform-browser-dynamic": "~10.1.2",
+    "@angular/router": "~10.1.2",
+    "@types/jest": "^29.2.4",
+    "angular2-notifications": "^9.0.0",
+    "aos": "^2.3.4",
+    "build": "^0.1.4",
+    "cors": "^2.8.5",
+    "jest": "^29.3.1",
+    "jest-preset-angular": "^12.2.3",
+    "jquery": "^3.6.3",
+    "ng-noty": "^1.0.1",
+    "ngx-toastr": "^13.1.0",
+    "noty": "^3.2.0-beta",
+    "rxjs": "^7.8.0",
+    "socket.io-client": "^4.5.4",
+    "tslib": "^2.4.1",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1001.2",
+    "@angular/cli": "~10.1.2",
+    "@angular/compiler-cli": "~10.1.2",
+    "@types/aos": "^3.0.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.17",
+    "codelyzer": "^0.0.28",
+    "ng-packagr": "^15.0.3",
+    "protractor": "~7.0.0",
+    "ts-node": "~10.9.1",
+    "tslint": "~6.1.0",
+    "typescript": "<4.1.0"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setup.jest.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/tsconfig.spec.json",
+        "stringifyContentPathRegex": "\\.html$"
+      }
+    }
+  }
+}
