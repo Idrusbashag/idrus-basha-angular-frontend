@@ -1,10 +1,8 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminService } from '../../services/admin.service';
-
-
 
 @Component({
   selector: 'app-addpizza',
@@ -16,7 +14,7 @@ export class AddpizzaComponent implements OnInit {
   avail: boolean;
   onepizza: any;
   image;
-  constructor(private http: HttpClient, private router: Router, private adminService: AdminService) { }
+  constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
     this.check()
@@ -51,7 +49,7 @@ export class AddpizzaComponent implements OnInit {
     formData.append('pizzaname', f.controls.pizzaname.value);
     formData.append('pizzasize', f.controls.pizzasize.value);
     formData.append('pizzaprice', f.controls.pizzaprice.value);
-    this.http.post<any>('https://localhost:3000/admin/addpizza', formData,).subscribe(
+    this.http.post<any>('https://idrus-basha-food-order-frontend.onrender.com/admin/addpizza', formData,).subscribe(
       (res) => {
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a pizza!!!"

@@ -8,7 +8,7 @@ export class AdminService {
   public avail = false;
   public msg = '';
   public temporder: any;
-  public baseUri = 'https://idrus-basha-food-order.onrender.com/admin';
+  public baseUri = 'https://idrus-basha-food-order-backend.onrender.com/admin';
   public headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(public http: HttpClient) { }
 

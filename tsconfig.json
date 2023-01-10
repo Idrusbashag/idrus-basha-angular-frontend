@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "http://idrusonlinepizzaorder.ib/",
+    "baseUrl": "https://idrus-basha-food-order-frontend.onrender.com",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

@@ -21,7 +21,7 @@ export class EditpizzaComponent implements OnInit {
   pp: any;
   id: any;
   image;
-  constructor(private http: HttpClient, private router: Router, private adminService: AdminService) { }
+  constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
     this.check();
@@ -98,7 +98,7 @@ export class EditpizzaComponent implements OnInit {
       formData.append('file', this.image);
 
       // *************
-      this.http.post<any>('https://loalhost:3000/admin/editpizzawithimage', formData).subscribe(
+      this.http.post<any>('https://idrus-basha-food-order-frontend.onrender.com/admin/editpizzawithimage', formData).subscribe(
         (res) => {
           this.adminService.avail = true;
           this.adminService.msg = 'Successfully Edited a pizza!!!';
@@ -121,7 +121,7 @@ export class EditpizzaComponent implements OnInit {
     }
     else {
 
-      this.http.get<any>('https://idrus-basha-food-order.onrender.com/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp
+      this.http.get<any>('https://idrus-basha-food-order-backend.onrender.com/admin/editpizzawithoutimage?id=' + this.id + '&pizzaname=' + this.pn + '&pizzasize=' + this.ps + '&pizzaprice=' + this.pp
       ).subscribe(
         (res) => {
           this.adminService.avail = true;

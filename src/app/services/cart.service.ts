@@ -10,14 +10,14 @@ export class CartService {
 
   public avail = false;
   public msg = '';
-  private baseUri = 'https://idrus-basha-food-order.onrender.com';
+  private baseUri = 'https://idrus-basha-food-order-backend.onrender.com';
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 
 
   addPizza(body: any) {
 
-    return this.http.post('https://idrus-basha-food-order.onrender.com/addtocart', body, {
+    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/addtocart', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -25,7 +25,7 @@ export class CartService {
 
 
   deletePizza(body: any) {
-    return this.http.post('https://idrus-basha-food-order.onrender.com/deletefromcart', body, {
+    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/deletefromcart', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });

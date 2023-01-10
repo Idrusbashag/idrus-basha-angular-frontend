@@ -11,7 +11,7 @@ import * as AOS from 'aos';
 export class AaComponent implements OnInit {
   image;
   socket: any;
-  constructor(private http: HttpClient, private toastr: ToastrService  ) { }
+  constructor(public http: HttpClient, public toastr: ToastrService  ) { }
 
   ngOnInit(): void {
     AOS.init();
