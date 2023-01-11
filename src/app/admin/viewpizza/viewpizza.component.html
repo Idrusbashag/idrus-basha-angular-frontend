@@ -31,7 +31,7 @@
       <tr *ngFor="let pizza of pizzas;index as i">
 
         <th scope="row">{{i+1}}</th>
-        <td><img src="https://idrus-basha-food-order-frontend.onrender.com/assets/pizza/{{pizza.pizzaimage}}" alt="" height=100 width=100 /></td>
+        <td><img src="https://idrus-basha-food-order-frontend.onrender.com/assets/pizza{{pizza.pizzaimage}}" alt="" height=100 width=100 /></td>
         <td>{{pizza.pizzaname}}</td>
         <td><button class="btn btn-link" href="#" (click)="editpizza(pizza)"><i class="fas fa-edit" aria-hidden="true"></i></button></td>
         <td><button class="btn btn-link" (click)="deletepizza(pizza)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
