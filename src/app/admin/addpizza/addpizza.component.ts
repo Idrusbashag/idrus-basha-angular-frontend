@@ -13,7 +13,7 @@ export class AddpizzaComponent implements OnInit {
   msg: any = [];
   avail: boolean;
   onepizza: any;
-  image;
+  image: any;
   constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {

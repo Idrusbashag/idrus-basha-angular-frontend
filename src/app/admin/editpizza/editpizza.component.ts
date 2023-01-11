@@ -20,7 +20,7 @@ export class EditpizzaComponent implements OnInit {
   ps: any;
   pp: any;
   id: any;
-  image;
+  image:any;
   constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
@@ -98,7 +98,7 @@ export class EditpizzaComponent implements OnInit {
       formData.append('file', this.image);
 
       // *************
-      this.http.post<any>('https://idrus-basha-food-order-frontend.onrender.com/admin/editpizzawithimage', formData).subscribe(
+      this.http.post<any>('https://idrus-basha-food-order-backend.onrender.com/admin/editpizzawithimage', formData).subscribe(
         (res) => {
           this.adminService.avail = true;
           this.adminService.msg = 'Successfully Edited a pizza!!!';
@@ -111,7 +111,7 @@ export class EditpizzaComponent implements OnInit {
           if (error instanceof HttpErrorResponse)
           {
 
-              this.router.navigate(['/login']);
+              this.router.navigate(['/admin']);
 
           }
           console.log(error);
