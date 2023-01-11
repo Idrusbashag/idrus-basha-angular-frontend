@@ -9,7 +9,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class NavbarComponent implements OnInit {
   notycnt: any;
-  constructor(private router: Router, private  cartService: CartService) { }
+  constructor(public router: Router, public  cartService: CartService) { }
 
   ngOnInit(): void {
 

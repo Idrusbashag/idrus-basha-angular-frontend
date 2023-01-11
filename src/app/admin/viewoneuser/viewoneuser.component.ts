@@ -15,7 +15,7 @@ export class ViewoneuserComponent implements OnInit {
   public name: any;
   public email: any;
   public contact: any;
-  constructor(private router: Router, private adminService: AdminService) { }
+  constructor(public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
     this.check();

@@ -13,7 +13,7 @@ export class ResetComponent implements OnInit {
   avail: boolean;
   arr: any[];
   checkmail: boolean;
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.checkmail = false;

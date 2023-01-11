@@ -9,7 +9,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./useroffer.component.css']
 })
 export class UserofferComponent implements OnInit {
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
   ngOnInit(): void {
     this.check();
   }

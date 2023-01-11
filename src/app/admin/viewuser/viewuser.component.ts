@@ -14,7 +14,7 @@ export class ViewuserComponent implements OnInit {
   public users: User[];
   avail: boolean;
   arr: any[];
-  constructor(private router: Router, private adminService: AdminService) { }
+  constructor(public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
     this.check();

@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   total:any;
   emptychechk:boolean;
 
-  constructor(private router: Router, private authService: AuthService,private cartService:CartService) { }
+  constructor(public router: Router, public authService: AuthService,public cartService:CartService) { }
 
   ngOnInit(): void {
     this.check()

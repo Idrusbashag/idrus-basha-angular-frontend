@@ -14,7 +14,7 @@ export class ChangepasswordComponent implements OnInit {
   avail: boolean;
   arr: any[];
   isValid = false;
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.readUser();

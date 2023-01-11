@@ -15,7 +15,7 @@ export class ResetPasswordDoneComponent implements OnInit {
   otparr: any[];
   checkmail: boolean;
   otpflag: boolean;
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.checkmail = false;

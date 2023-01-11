@@ -11,7 +11,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class EmptycartComponent implements OnInit {
 
-  constructor(private router: Router, private authService: AuthService, private cartService: CartService) { }
+  constructor(public router: Router, public authService: AuthService, public cartService: CartService) { }
 
   ngOnInit(): void {
     this.check();

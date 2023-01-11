@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class UserfeedbackComponent implements OnInit {
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.check();

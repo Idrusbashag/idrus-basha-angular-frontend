@@ -13,7 +13,7 @@ export class ViewpizzaComponent implements OnInit {
   avail: boolean;
   arr: any[];
 
-  constructor(private router: Router, private adminService: AdminService) { }
+  constructor(public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
     this.check();
@@ -55,7 +55,7 @@ export class ViewpizzaComponent implements OnInit {
         console.log(error);
       }
     );
-    // console.log();
+    console.log();
   }
 
   deletepizza(pizza) {
@@ -64,7 +64,7 @@ export class ViewpizzaComponent implements OnInit {
     const pizzaid = pizza._id;
     this.adminService.deletepizza(pizzaid).subscribe(
       data => {
-        // console.log(data);
+        console.log(data);
         this.adminService.avail = true;
         this.adminService.msg = 'Successfully Deleted a Pizza!!!';
         this.router.navigate(['/admin']);

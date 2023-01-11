@@ -12,7 +12,7 @@ export class AdminhomeComponent implements OnInit {
   msg : any =[];
   avail:boolean;
   orders : any =[];
-  constructor(private adminService: AdminService,private router: Router) { }
+  constructor(public adminService: AdminService,public router: Router) { }
 
   ngOnInit(): void {
     this.check()

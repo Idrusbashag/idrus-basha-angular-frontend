@@ -10,7 +10,7 @@ import { AdminService } from '../../services/admin.service';
 })
 export class ViewfeedbackComponent implements OnInit {
   arr: any[];
-  constructor(private adminService: AdminService, private router: Router) { }
+  constructor(public adminService: AdminService, public router: Router) { }
 
   ngOnInit(): void {
     this.check();

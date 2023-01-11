@@ -10,9 +10,9 @@ export class CartService {
 
   public avail = false;
   public msg = '';
-  private baseUri = 'https://idrus-basha-food-order-backend.onrender.com';
-  private headers = new HttpHeaders().set('Content-Type', 'application/json');
-  constructor(private http: HttpClient, private router: Router) { }
+  public baseUri = 'https://idrus-basha-food-order-backend.onrender.com';
+  public headers = new HttpHeaders().set('Content-Type', 'application/json');
+  constructor(public http: HttpClient, public router: Router) { }
 
 
   addPizza(body: any) {

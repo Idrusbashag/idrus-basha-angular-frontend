@@ -11,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class UserhomeComponent implements OnInit {
   pizzas: any[];
-  constructor(private router: Router, private authService: AuthService, private cartService: CartService, private toastr: ToastrService) { }
+  constructor(public router: Router, public authService: AuthService, public cartService: CartService, public toastr: ToastrService) { }
 
   ngOnInit(): void {
     if (this.authService.avail) {

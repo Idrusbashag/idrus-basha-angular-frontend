@@ -11,7 +11,7 @@ import { AdminService } from '../../services/admin.service';
 })
 export class ViewoneorderComponent implements OnInit {
 
-  constructor(private router: Router, private adminService: AdminService) { }
+  constructor(public router: Router, public adminService: AdminService) { }
   oneorderid: any;
   arr: any;
   pizzas: any;

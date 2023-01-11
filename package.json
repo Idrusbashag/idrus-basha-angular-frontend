@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "clear_jest": "jest --clearCache"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^10.1.6",
     "@angular/common": "~10.1.2",

@@ -17,7 +17,7 @@ export class EditprofileComponent implements OnInit {
   public contact: any;
   public new: any;
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.new = true;

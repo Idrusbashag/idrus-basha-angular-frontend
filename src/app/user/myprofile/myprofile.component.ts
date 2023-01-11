@@ -16,7 +16,7 @@ export class MyprofileComponent implements OnInit {
   public name: any;
   public email: any;
   public contact: any;
-  constructor(private router: Router, private toastr: ToastrService, private authService: AuthService) { }
+  constructor(public router: Router, public toastr: ToastrService, public authService: AuthService) { }
 
   ngOnInit(): void {
 
