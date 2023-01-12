@@ -69,11 +69,12 @@ export class AddpizzaComponent implements OnInit {
     );
 
   }
-  selectImage(event) {
+  selectImage($event) {
     console.log("image selected");
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
+    if ($event.target.files.length > 0) {
+      const file = $event.target.files[0];
       this.image = file;
+      console.log(file);
     }
   }
 }
