@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -80,11 +79,9 @@ import { ViewoneuserComponent } from './admin/viewoneuser/viewoneuser.component'
     ToastrModule.forRoot(),
   ],
   providers: [AuthGuard,AdminGuard,{
-    // provide:HTTP_INTERCEPTORS,
-    // useClass:TokenInterceptorService,
-    multi:true,
-    provide:LocationStrategy,
-    useClass:HashLocationStrategy
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorService,
+    multi:true
   }],
   bootstrap: [AppComponent]
 })
