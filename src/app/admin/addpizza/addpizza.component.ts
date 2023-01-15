@@ -37,9 +37,9 @@ export class AddpizzaComponent implements OnInit {
     )
   }
   file: any;
-  pizzaname: any;
-  pizzasize: any;
-  pizzaprice: any;
+  pizzaname: string;
+  pizzasize: string;
+  pizzaprice: number;
 
   onSubmit(f: NgForm) {
     if (!f.valid) {
