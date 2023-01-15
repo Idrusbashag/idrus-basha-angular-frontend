@@ -1,4 +1,5 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Binary } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -36,7 +37,7 @@ export class AddpizzaComponent implements OnInit {
       }
     )
   }
-  file: any;
+  file:Binary;
   pizzaname: string;
   pizzasize: string;
   pizzaprice: number;
