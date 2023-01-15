@@ -36,8 +36,10 @@ export class AddpizzaComponent implements OnInit {
       }
     )
   }
-
-
+  pizzaname;
+  pizzasize;
+  pizzaprice;
+  pizza;
   onSubmit(f: NgForm) {
     if (!f.valid) {
       this.msg = "something went  wrong!!";
