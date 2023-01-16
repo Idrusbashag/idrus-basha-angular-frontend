@@ -80,6 +80,7 @@ export class AddpizzaComponent implements OnInit {
       this.image = file;
       console.log(file);
       console.log(FormData)
+      console.log(Storage)
     }
   }
 }
