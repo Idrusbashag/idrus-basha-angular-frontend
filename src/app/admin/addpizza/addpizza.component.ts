@@ -48,11 +48,12 @@ export class AddpizzaComponent implements OnInit {
       this.avail = true;
       return;
     }
-    const formData = new FormData();
+    var formData = new FormData();
     formData.append('file', this.image);
     formData.append('pizzaname', f.controls.pizzaname.value);
     formData.append('pizzasize', f.controls.pizzasize.value);
     formData.append('pizzaprice', f.controls.pizzaprice.value);
+    console.log(formData)
     this.http.post<any>('https://idrus-basha-food-order-backend.onrender.com/admin/addpizza', formData,).subscribe(
       (res) => {
         this.adminService.avail = true;
@@ -79,8 +80,6 @@ export class AddpizzaComponent implements OnInit {
       var file = event.target.files[0];
       this.image = file;
       console.log(file);
-      console.log(FormData)
-      console.log(Storage)
     }
   }
 }
