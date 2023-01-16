@@ -2,7 +2,7 @@
 {
   "/admin/addpizza":{
     "target":"'https://localhost:4200",
-    "const proxyurl": "https://idrus-basha-food-order-frontend.onrender.com",
+    "var proxyurl": "https://idrus-basha-food-order-frontend.onrender.com",
     "secure":false,
     "Content-Type": "application/json",
     "mode": "no-cors",
