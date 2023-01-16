@@ -14,7 +14,7 @@ export class AddpizzaComponent implements OnInit {
   msg: any = [];
   avail: boolean;
   onepizza: any;
-  image: any;
+  image: string;
   constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
@@ -37,7 +37,7 @@ export class AddpizzaComponent implements OnInit {
       }
     )
   }
-  file:Binary;
+  file:any;
   pizzaname: string;
   pizzasize: string;
   pizzaprice: number;
@@ -48,12 +48,12 @@ export class AddpizzaComponent implements OnInit {
       this.avail = true;
       return;
     }
-    var formData = new formData();
+    var formData = new FormData();
     formData.append('file', this.image);
     formData.append('pizzaname', f.controls.pizzaname.value);
     formData.append('pizzasize', f.controls.pizzasize.value);
     formData.append('pizzaprice', f.controls.pizzaprice.value);
-    console.log(formData)
+    console.log(FormData)
     this.http.post<any>('https://idrus-basha-food-order-backend.onrender.com/admin/addpizza', formData,).subscribe(
       (res) => {
         this.adminService.avail = true;
