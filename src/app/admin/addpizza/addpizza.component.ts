@@ -49,7 +49,7 @@ export class AddpizzaComponent implements OnInit {
       return;
     }
     {
-    var formData = new FormData();
+    var formData:FormData = new FormData();
     formData.append('file', this.image);
     formData.append('pizzaname', f.controls.pizzaname.value);
     formData.append('pizzasize', f.controls.pizzasize.value);
