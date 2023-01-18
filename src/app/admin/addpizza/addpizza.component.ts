@@ -45,7 +45,7 @@ export class AddpizzaComponent implements OnInit {
   onSubmit(f: NgForm) {
     if (!f.valid) {
       this.msg = "something went  wrong!!";
-      this.avail = false;
+      this.avail = true;
       return;
     }
     {
