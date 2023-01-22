@@ -14,7 +14,7 @@ export class AddpizzaComponent implements OnInit {
   msg: any = [];
   avail: boolean;
   onepizza: any;
-  image: string;
+  image: any;
   constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
@@ -76,10 +76,10 @@ export class AddpizzaComponent implements OnInit {
     );
 
   }
-  selectImage(event) {
+  selectImage(event:any) {
     console.log("image selected");
     if (event.target.files.length > 0) {
-      var file = event.target.files[0];
+      const file = event.target.files[0];
       this.image = file;
       console.log(file);
     }
