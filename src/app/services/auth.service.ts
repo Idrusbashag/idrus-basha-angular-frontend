@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   public avail = false;
   public msg = '';
-  public baseUri = 'https://idrus-basha-food-order-backend.onrender.com';
+  public baseUri = 'https://idrus-basha-food-order-b.onrender.com';
   public headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(public http: HttpClient, public router: Router) { }
 
@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   register(body: any) {
-    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/register', body, {
+    return this.http.post('https://idrus-basha-food-order-b.onrender.com/register', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -28,7 +28,7 @@ export class AuthService {
   }
 
   reset(body: any) {
-    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/reset', body, {
+    return this.http.post('https://idrus-basha-food-order-b.onrender.com/reset', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -36,7 +36,7 @@ export class AuthService {
 
   resetpassworddone(body: any) {
 
-    return this.http.put('https://idrus-basha-food-order-backend.onrender.com/forgot-password-done', body, {
+    return this.http.put('https://idrus-basha-food-order-b.onrender.com/forgot-password-done', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -47,7 +47,7 @@ export class AuthService {
   }
 
   login(body: any) {
-    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/login', body, {
+    return this.http.post('https://idrus-basha-food-order-b.onrender.com/login', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -83,7 +83,7 @@ export class AuthService {
   }
 
   changepassword(body: any) {
-    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/changepassword', body, {
+    return this.http.post('https://idrus-basha-food-order-b.onrender.com/changepassword', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -91,7 +91,7 @@ export class AuthService {
 
 
   sendfeedback(body: any) {
-    return this.http.post('https://idrus-basha-food-order-backend.onrender.com/sendfeedback', body, {
+    return this.http.post('https://idrus-basha-food-order-b.onrender.com/sendfeedback', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
