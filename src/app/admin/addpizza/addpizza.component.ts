@@ -15,6 +15,7 @@ export class AddpizzaComponent implements OnInit {
   avail: boolean;
   onepizza: any;
   image: any;
+  https: any;
   constructor(public http: HttpClient, public router: Router, public adminService: AdminService) { }
 
   ngOnInit(): void {
@@ -56,7 +57,7 @@ export class AddpizzaComponent implements OnInit {
     formData.append('pizzaprice', f.controls.pizzaprice.value);
     console.log(formData)
     }
-    this.http.post<any>('https://idrus-basha-food-order-b.onrender.com/admin/addpizza', formData,).subscribe(
+    this.http.post<any>('http://idrus-basha-food-order-b.onrender.com/admin/addpizza', formData,).subscribe(
       (res) => {
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a pizza!!!"
