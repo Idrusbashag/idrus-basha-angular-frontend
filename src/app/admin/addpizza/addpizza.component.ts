@@ -57,7 +57,7 @@ export class AddpizzaComponent implements OnInit {
     formData.append('pizzaprice', f.controls.pizzaprice.value);
     console.log(formData)
     }
-    this.http.post<any>('http://localhost:3000/admin/addpizza', formData,).subscribe(
+    this.http.post<any>('https://idrus-basha-food-order-backend.onrender.com/admin/addpizza', formData,).subscribe(
       (res) => {
         this.adminService.avail = true;
         this.adminService.msg = "Successfully Added a pizza!!!"
